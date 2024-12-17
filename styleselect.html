@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Selection</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ECDFCC;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        .navbar-nav {
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+        .nav-link {
+            font-size: 1.2rem;
+        }
+        .logo {
+            max-width: 100px;
+        }
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .style-card {
+            background-color: #697565;
+            color: white;
+            border-radius: 10px;
+            text-align: center;
+            padding: 30px;
+            margin: 30px;
+            width: 350px;
+        }
+        .style-card img {
+            width: 100%;
+            max-width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            background-color: #333;
+        }
+        .btn-style {
+            background-color: #697565;
+            color: white;
+            border: none;
+            margin-top: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .btn-style:hover {
+            background-color: #181C14;
+        }
+        .footer {
+            background-color: #697565;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-light bg-#ECDFCC">
+    <a class="navbar-brand" href="index.html">
+        <img src="logo.png" alt="Logo" class="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="styleselect.html">Выбор стиля фотосессии</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="portfolio.html">Портфолио</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="contacts.html">Контакты</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="about.html">О нас</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="reg.html">Регистрация/вход</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<!-- Main Content -->
+<div class="container main-content">
+    <div class="row">
+        <!-- Style 1 -->
+        <div class="col-md-4 d-flex justify-content-center">
+            <div class="style-card">
+                <img src="style1.jpg" alt="Style 1">
+                <h5>Фотосессия №1</h5>
+                <button class="btn btn-style" data-toggle="modal" data-target="#styleModal">Выбрать</button>
+            </div>
+        </div>
+        <!-- Style 2 -->
+        <div class="col-md-4 d-flex justify-content-center">
+            <div class="style-card">
+                <img src="style2.jpg" alt="Style 2">
+                <h5>Фотосессия №2</h5>
+                <button class="btn btn-style" data-toggle="modal" data-target="#styleModal">Выбрать</button>
+            </div>
+        </div>
+        <!-- Style 3 -->
+        <div class="col-md-4 d-flex justify-content-center">
+            <div class="style-card">
+                <img src="style3.jpg" alt="Style 3">
+                <h5>Фотосессия №3</h5>
+                <button class="btn btn-style" data-toggle="modal" data-target="#styleModal">Выбрать</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>&copy; 2024 Фотостудия. Все права не зарегистрированы. Студия Артемия Лебедева не принимала участие в разработке сайта</p>
+</div>
+
+<!-- Modal for Date Selection -->
+<div class="modal fade" id="styleModal" tabindex="-1" aria-labelledby="styleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="styleModalLabel">Выбор стиля фотосессии</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Вы выбрали стиль фотосессии, выберите дату бронирования съемки:</p>
+                <input type="date" class="form-control" id="bookingDate">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="confirmBooking()">Забронировать</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Confirmation Modal -->
+<div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p>Вы успешно забронировали съемку.</p>
+                <button type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function confirmBooking() {
+        $('#styleModal').modal('hide');
+        $('#confirmationModal').modal('show');
+    }
+</script>
+</body>
+</html>

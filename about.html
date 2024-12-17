@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Photo Studio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ECDFCC;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        .navbar-nav {
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+        .footer {
+            background-color: #697565;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: auto;
+        }
+        .about-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #181C14;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+        ul {
+            padding-left: 20px;
+            text-align: left;
+        }
+        .big-button {
+            font-size: 20px;
+            padding: 10px 40px;
+            background-color: #181C14;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .big-button:hover {
+            background-color: #697565;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-light bg-#ECDFCC">
+    <a class="navbar-brand" href="index.html">
+        <img src="logo.png" alt="Logo" class="logo" style="max-width: 100px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="#">Выбор стиля фотосессии</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="portfolio.html">Портфолио</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="contacts.html">Контакты</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="about.html">О нас</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="reg.html">Регистрация/вход</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container main-content">
+    <div class="about-card">
+        <h1>О нас</h1>
+        <p>Добро пожаловать в нашу фотостудию! Мы — команда профессионалов, вдохновленных искусством фотографии. Наш главный фотограф, Третий из Вайперр, обладает более чем 10-летним опытом работы и специализируется на создании эмоциональных портретов, стильных рекламных съемок и запоминающихся свадебных фотосессий.</p>
+        <p>Мы верим, что каждая фотография — это история, которую стоит рассказать. В нашей студии мы создаем уютную атмосферу, чтобы каждый клиент чувствовал себя комфортно и раскованно. Современное оборудование и творческий подход позволяют нам запечатлеть ваши лучшие моменты так, чтобы вы возвращались к ним снова и снова.</p>
+        <h2>Почему выбирают нас?</h2>
+        <ul>
+            <li>Индивидуальный подход к каждому клиенту.</li>
+            <li>Уютная студия в центре города.</li>
+            <li>Гибкий график работы.</li>
+            <li>Возможность съемок на выезде.</li>
+        </ul>
+        <p>Мы рады запечатлеть ваши воспоминания и сделать их вечными!</p>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="big-button">Свяжитесь с нами</a>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>&copy; 2024 Фотостудия. Все права не зарегистрированы. Студия Артемия Лебедева не принимала участие в разработке сайта</p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
